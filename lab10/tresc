@@ -1,0 +1,45 @@
+1. Zmodyfikuj przykładowe programy tak, aby serwer odsyłał do klienta komunikat potwierdzający
+odebranie komunikatu.
+2. Napisz programy, które będą realizował polecenie zawarte w zadaniu pierwszym, ale w oparciu
+o protokół TCP/IP.
+3. Napisz programy, które prześlą plik o rozmiarze większym od 1 MiB między dwoma komputera-
+mi, z użyciem protokołu TCP/IP. Sprawdź, co się stanie, jeśli plik będzie wysyłany w jednym
+komunikacie.
+4. Napisz programy przesyłające plik o wielkości przekraczającej 1 MiB między dwoma komputerami,
+przy użyciu protokołu bezpołączeniowego.
+5. Uzupełnij programy z pierwszego zadania tak, aby przesyłały między sobą po 10 komunikatów
+oraz dodatkowo wykrywały i retransmitowały zagubione pakiety. Wskazówka: można wykorzystać
+w rozwiązaniu obsługę sygnałów, w szczególności sygnał sigalrm.
+6. Protokół UDP/IP nie gwarantuje, że komunikaty dotrą do odbiorcy w kolejności, w jakiej zostały
+nadane. Napisz programy, które same o to zadbają.
+7. Stwórz serwer współbieżny, który będzie obsługiwał połączenia od wielu klientów, również napi-
+sanych przez Ciebie - mogą one przesyłać np. pseudolosowe liczby do serwera, który będzie je
+wyświetlał na ekranie. Połączenia powinny być obsługiwane przez procesy potomne. Aby uniknąć
+tworzenia procesów zombie, proces macierzysty powinien ignorować sygnały o zakończeniu proce-
+sów potomnych. Użyj protokołu połączeniowego.
+8. Wykonaj polecenie z poprzedniego zadania, używając tym razem wątków zamiast procesów.
+9. Stwórz serwer iteracyjny, o takim samym działaniu jak serwer w zadaniu siódmym. Skorzystaj
+z funkcji select().
+10. W praktyce dosyć często tworzy się serwery, które mają charakterystykę pośrednią między współ-
+bieżnym a iteracyjnym. Taki serwer utrzymuje pewną stałą liczbę wątków, które są odpowiedzialne
+za obsługę połączeń. Konieczność nawiązania nowego połączenia sprawdza przy pomocy funkcji
+select(). Po nawiązaniu komunikacji jej obsługę powierza się pierwszemu wątkowi z puli, który
+nie jest zajęty obsługiwaniem innego połączenia. Napisz taki serwer i klientów, którzy będą do
+niego wysyłać komunikaty tekstowe, będące kolejnymi wierszami plików tekstowych.
+11. Napisz programy, które będą podawały czasy przesyłania kolejnych pakietów przez sieć. Wielkość
+pakietu będzie określał użytkownik jako argument wywołania programu klienckiego. Użyj protokołu
+UDP/IP.
+12. Napisz programy, które będą podawały czasy przesyłania kolejnych pakietów przez sieć. Wielkość
+pakietu będzie określał użytkownik jako argument wywołania programu klienckiego. Użyj protokołu
+TCP/IP.
+13. Stwórz programy, które będą tworzyły strukturę farmer-worker. Farmer będzie rozsyłał liczby
+naturalne z przedziału od 2 do 302 do procesów typu worker, z których każdy będzie sprawdzał,
+czy otrzymana przez niego liczba jest pierwsza i odsyłał wynik do farmera. Farmer powinien
+współpracować z trzema procesami tego typu. Użyj protokołu bezpołączeniowego.
+14. Napisz programy, o strukturze klient-serwer, które pozwolą użytkownikom wysyłać do siebie wia-
+domości asynchronicznie (tak jak e-mail). Serwer będzie jedynym programem działającym w trybie
+ciągłym. Do jego zadań będzie należało rejestrowanie nowych użytkowników, wysyłanie wiadomo-
+ści do adresata, jeśli ten nawiąże połączenie oraz odbieranie wiadomości do innych użytkowników.
+Klient po uruchomieniu powinien wysłać serwerowi nazwę użytkownika, następnie odebrać wia-
+domości, które są dla niego przeznaczone i umożliwić użytkownikowi wysłanie komunikatów do
+innych użytkownik

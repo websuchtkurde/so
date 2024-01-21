@@ -1,0 +1,32 @@
+1. Napisz program, który przepisze z istniejącego pliku tekstowego czterdzieści znaków z początku
+i czterdzieści znaków z końca do nowego pliku.
+2. Stwórz plik tekstowy wielkości 512 bajtów, z „dziurą” w środku.
+3. Zademonstruj działanie funkcji replikującej deskryptory plików.
+4. Zademonstruj działanie funkcji flock() na przykładzie, w którym kilka procesów współbieżnych
+będzie się ubiegało o możliwość zapisu lub odczytu z pliku.
+5. Powtórz zadanie czwarte używając fcntl() i blokując wybrane fragmenty pliku.
+6. Napisz program, który przeczyta i wypisze na ekran treść pliku tekstowego o dowolnej wielkości.
+Nazwę pliku należy przekazywać jako argument wywołania programu.
+7. Napisz odpowiednik programu „cp” do kopiowania plików, bez obsługi katalogów i opcji wykonania.
+8. Napisz program, w którym dwa procesy będą zapisywały do jednego pliku, a trzy będą odczytywały.
+Zastosuj zajmowanie zalecane do synchronizacji pracy procesów.
+9. Napisz program, który otworzy do odczytu wskazany plik tekstowy, a następnie wywoła funkcję
+fork(). Proces potomny policzy sumę liczb parzystych znalezionych w otwartym pliku, a macie-
+rzysty liczb nieparzystych.
+10. Napisz dwa programy: pierwszy będzie generował losowe liczby i zapisywał je porcjami do pliku,
+a drugi działając współbieżnie z pierwszym będzie je odczytywał i szukał wartości maksymalnej.
+Do blokowania fragmentów pliku użyj funkcji fcntl().
+11. Napisz program, w którym stworzysz cztery procesy. Każdy z nich uzyska kopię deskryptora do
+pojedynczego pliku, przy czym jeden proces będzie do tego pliku pisał, a pozostałe będą czytały.
+12. Napisz program, który będzie zapisywał do pliku informacje tekstowe porcjami po 4 KiB w trzech
+trybach: z wykorzystaniem funkcji fsync(), z użyciem fdatasync() i bez stosowania żadnej z tych
+funkcji. Dokonaj pomiaru czasu zapisu dla każdego z tych przypadków. Do wyznaczenia czasu
+zapisu użyj funkcji clock_gettime() (Szczegóły: man 2 clock_gettime).
+13. Napisz program, który skopiuje plik w całości używając funkcji sendfile().
+14. Napisz program, który odczyta i wyświetli na ekranie całą zawartość pliku tekstowego, korzystając
+z funkcji mmap().
+15. Stwórz dwa procesy niespokrewnione (osobne programy), które będą odwzorowywały ten sam plik
+tekstowy. Jeden będzie co sekundę odczytywał jego zawartość, a drugi będzie go modyfikował.
+Pamiętaj, że aby operacja zmiany odwzorowanego pliku się powiodła, to nie wolno do tego pliku
+dopisywać informacji, można jedynie zmieniać istniejące.
+16. Napisz program, który odczyta informacje o wybranym pliku za pomocą funkcji fstat().
