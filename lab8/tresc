@@ -1,0 +1,11 @@
+1. Napisz program, który sprawdzi, czy z deskryptorem standardowego wejścia (stdin_fileno lub
+wartość 0) jest związany terminal. Jeśli tak, to program powinien wypisać nazwę pliku urządzenia
+tego terminala, oraz kilka jego bieżących ustawień.
+2. Napisz program, który wyłączy echo, czyli wypisywanie znaków wprowadzonych z klawiatury na
+ekran. Po ponownym uruchomieniu program powinien przywrócić echo.
+3. Napisz program demonstrujący obsługę terminala w trybie niekanonicznym (Może to być np. pro-
+gram posiadający menu, które jest uaktywnione naciśnięciem klawisza, bez konieczności potwier-
+dzania klawiszem Enter).
+4. Napisz program, po którego uruchomieniu terminal będzie wypisywał wszystkie informacje dużymi
+literami (niezależnie od ustawienia CapsLock). Efekt ten powinno usuwać ponowne uruchomienie
+programu.

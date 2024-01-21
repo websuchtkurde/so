@@ -1,0 +1,35 @@
+1. Stwórz w programie dwa wątki, które wypiszą swój identyfikator i identyfikator procesu.
+2. Stwórz dwa wątki w programie. Każdemu z nich przekaż przez parametr funkcji dwie liczby. Pierw-
+szy wątek niech policzy sumę tych liczb, drugi różnicę. Obie wartości należy wypisać na ekran
+w wątkach.
+3. Zmodyfikuj program opisany wyżej tak, aby wątki zwracały jako rezultaty swojego działania wy-
+liczone wyniki do wątku głównego, który będzie wypisywał je na ekran.
+4. Napisz program, w którym stworzysz jeden wątek łączny i jeden wątek rozdzielny oraz zademon-
+strujesz różnicę w działaniu tych wątków.
+5. Zademonstruj działanie funkcji pthread_kill() wysyłając do wątku sygnał, dla którego będzie on
+miał własną procedurę obsługi. Do podmiany procedury obsługi wykorzystaj funkcję sigaction().
+6. Zademonstruj sposób użycia semafora, którego wartość początkowa jest większa od jeden.
+7. Zademonstruj działanie funkcji sprzątających.
+8. Napisz program, w którym stworzysz 20 wątków wykonujących tę samą czynność. W momencie
+kiedy jeden z nich ją zakończy pozostałe powinny być anulowane w sposób asynchroniczny.
+9. Popraw program z listingu 1 tak, aby tablica array była przekazywana do funkcji wątku wraz
+z typem za pomocą parametru data.
+10. Napisz program, który zademonstruje działanie włączania i wyłączania anulowania wątków.
+11. Napisz program z dwoma wątkami i zademonstruj w nim użycie zmiennych prywatnych.
+12. Napisz program z dwoma wątkami, z których każdy posiada swoją zmienną prywatną. Klucze do
+tych zmiennych zapisz w zmiennych globalnych. Sprawdź co się stanie, jeśli wątki „zamienią” się
+kluczami do zmiennych prywatnych.
+13. Poszukaj innych funkcji do zarządzenia atrybutami wątków niż te, które zostały opisane w instruk-
+cji. Napisz program, który zademonstruje ich działanie.
+14. Rozwiąż problem producenta i konsumenta za pomocą muteksa i zmiennej warunkowej.
+15. Rozwiąż problem czytelników i pisarzy za pomocą muteksa, semafora i zmiennej warunkowej.
+16. W programowaniu współbieżnym wykorzystywana jest czasem architektura procesów lub wątków,
+która określana jest mianem farmer-worker. Napisz program w oparciu o tę architekturę, który
+będzie sprawdzał, które z liczb naturalnych, mniejszych od 32 są liczbami pierwszymi. Wątków-
+-robotników powinno być pięciu, a każdemu z nich będzie przyporządkowana jedna z następujących
+liczb pierwszych: 2,3,5,7,11. Wątek-farmer będzie przydzielał każdemu z nich tę samą liczbę, dla
+której będą oni wyznaczać resztę z dzielenia przez ich liczbę pierwszą. Farmer po zakończeniu
+badania liczby przez wszystkich robotników, na podstawie wyników ich pracy powinien orzec, czy
+dana liczba jest pierwsza, czy też nie. Oczekiwanie robotników na liczbę do sprawdzenia zrealizuj
+za pomocą zmiennych warunkowych, a oczekiwanie farmera na wyniki za pomocą semafora System
+V.
